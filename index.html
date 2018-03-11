@@ -2,21 +2,22 @@
 
 <html>
 <head>
-  <link rel="icon" href="images/sickemoji.png">
+  <link rel="icon" href="images/JT_icon.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snotty Handkerchief - your NHS guide</title>
+  <title>Joanna Tam - Social Impact & Data Visualisation</title>
 
   <script src="jquery.min.js"></script>
   <script src="bootstrap.min.js"></script>
-
   <link href='bootstrap3/css/bootstrap.css' rel='stylesheet'>
   <link href='main.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="jquery-ui.css">
   <script src="jquery-1.12.4.js"></script>
   <script src="jquery-ui.js"></script>
-  <script>
+
+
+ <script>
     $( function() {
       $( "#tabs" ).tabs({
         event: "mouseover"
@@ -25,176 +26,193 @@
   </script>
 
 </head>
+<body data-spy="scroll" data-target="#main-navbar">
 
-<body>
-
-  <!--NAVIGATION BAR-->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
+  <!--NAVBAR-->
+    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src='images/shlogo.png' height='45'></a>
+        <a class="navbar-brand" href="#"><img src='images/home.png' height='14'></a>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#diagram"><img src='images/diagnoseme.png' height='30'></a></li>
-          <li><a href="#about"><img src='images/about.png' height='30'></a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  <!--TITLE CAROUSEL-->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active" role="listbox">
-       <br><br><br><img src='images/SH_title2.png' class="img-responsive" alt="Responsive image"><br><br>
-     </div>
-
-     <div class="item">
-      <br><br><br><img src="images/flu.png" class="img-responsive" alt="Responsive image"><br><br>
-    </div>
-
-    <div class="item">
-      <br><br><br><img src="images/wash.png" class="img-responsive" alt="Responsive image"><br><br>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-<!--DIAGNOSE DIAGRAM-->
-<div id="diagram" class="text-left"><div class='container'>
-  <br><br><br><center><img src='images/diagnoseme.png' height='50'></center>
-  <div class='row'>
-    <div class='col-sm-4'>
-      <div>
-        <img src='images/girl.png' class="img-responsive" alt="Responsive image">
-      </div></div>
-      <div class='col-sm-1'>
-      </div>
-      <div class='col-sm-7'>
-        <div><br>
-          <div id="tabs">
-            <ul>
-              <li><a href="#tabs-1">Cold vs. Flu</a></li>
-              <li><a href="#tabs-2">Fever</a></li>
-              <li><a href="#tabs-3">Coughing</a></li>
-              <li><a href="#tabs-4">Sneezing</a></li>
-              <li><a href="#tabs-5">Stuffy or Runny Nose</a></li>
-              <li><a href="#tabs-6">Sore Throat</a></li>
-              <li><a href="#tabs-7">Chest Discomfort</a></li>
-              <li><a href="#tabs-8">Headache</a></li>
-            </ul>
-            <div id="tabs-1">
-             <p>Flu and cold are both caused by viruses, but completely different ones. There are many viruses that can cause a cold, but only a few that can cause a flu. Cold symptoms are not sudden and develop over a few days. The flu has a rapid onset within 3-6 hours. The flu hits hard and includes sudden symptoms like high fever, aches and pains.</p><br>
-             <center><img src="images/1flu.png" height='200'></center>
-           </div>
-           <div id="tabs-2">
-             <li class="product_item">Fever is rare with a cold, but present with the flu</li>
-             <li class="product_item">A temperature of 38C or higher for 3-4 days is associated with the flu</li>
-             <li class="product_item">Unexplained chills and tiredness can be a sign of the flu</li>
-             <li class="product_item">Severe aches and pains are common with the flu</li><br>
-             <center><img src="images/2fever.png" height='200'></center>
-           </div>
-           <div id="tabs-3">
-             <li class="product_item">A hacking, mucus producing cough is often present with a cold</li>
-             <li class="product_item">A dry, non-mucus producing cough is usually present with the flu</li><br>
-             <center><img src="images/3cough.png" height='200'></center>
-           </div>
-           <div id="tabs-4">
-             <p>Sneezing is commonly present with a cold and rare with a flu</p><br>
-             <center><img src="images/4sneeze.png" height='200'></center>
-           </div>
-           <div id="tabs-5">
-            <li class="product_item">Usually accompanies a cold and typically resolves within a week</li>
-            <li class="product_item">Can be present with the flu</li><br>
-            <center><img src="images/5stuffy.png" height='300'></center>
-          </div>
-          <div id="tabs-6">
-            <li class="product_item">Pain and inflammation in the throat that usually comes with a cold</li>
-            <li class="product_item">Not as common, but can be present with the flu </li><br>
-            <center><img src="images/6throat.png" height='200'></center>
-          </div>
-          <div id="tabs-7">
-            <li class="product_item">Pain or abnormal sensations along the front of the body between the neck and upper abdomen</li>
-            <li class="product_item">Mild to moderate with a cold</li>
-            <li class="product_item">Severe with the flu</li><br>
-            <center><img src="images/7pain.png" height='200'></center>
-          </div>
-          <div id="tabs-8">
-            <p>Uncommon with a cold, but present in 80% of flu cases</p><br>
-            <center><img src="images/8headache.png" height='225'></center>
-          </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a class="page-scroll" href="#portfolio-section">Portfolio</a></li>
+              <li><a class="page-scroll" href="#about-section">About</a></li>
+              <li><a href="https://www.linkedin.com/in/joannacgtam/" target="_blank">Linkedin</a></li>
+              <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+          </ul>
         </div>
-        
-        
-      </div></div>
-    </div>
-  </div>
-</div>
+      </div>
+    </nav>
+
+  <!--HEADER-->
+  <div id="titleimage" class="text-left"><div class='container'>
+    <img src='images/header1.png' class="img-responsive" alt="Responsive image">
+  </div></div>
+
+  
+<!--PORTFOLIO-->
+<section id="portfolio-section" class="text-left">
+  <div class='container'>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="portfolio">
+
+                          <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                              <h2>Portfolio</h2>
+                              <h4>Increasing the accessibility & usefulness of data to decision-makers</h4>
+                          </div>
+                      </div>
+                  </div></div></div>
+
+    <div class="portfolio_content_area">
+      <div class="portfolio_menu">
+        <div class='container'>
+        <center>
+                <a href="#portfolio_menu" data-filter=".DataVis"><img src='images/data.png' height='13'>&nbsp;Data Visualisation & Reporting</a>&emsp;▪&emsp;
+                <a href="#portfolio_menu" data-filter=".Course"><img src='images/course.png' height='14'>&nbsp;Coursework</a>&emsp;▪&emsp;
+                <a href="#portfolio_menu" data-filter=".Art"><img src='images/art.png' height='14'>&nbsp;Artwork</a>
+        </center>
+            
+            
+              <div class='row'>
+              <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="DataVis">
+                  <img src="images/1-dv.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                  <div class="text"><a href="portfolio/tableau.html" target="_blank"><img src='images/data_white.png' height='17'><h1>LensShift</h1>
+                  <p>Data visualisation of the depth and breadth of the LensShift Taxonomy.<br>By collaborating with my colleagues, I ensure the quality of data is appropriate for effective and creative visualisation.</p></a></details>
+                  </div></div></div></div></div>
+
+              <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="DataVis">
+                  <img src="images/2-siobn.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                  <div class="text"><a href="portfolio/SIOBN_Michaelmas17-18_Impact_Report.pdf" target="_blank"><img src='images/data_white.png' height='17'><h1>SIOBN</h1>
+                  <p>Monitoring & evaluating the Social Impact Oxford Business Network's (SIOBN) initiatives. Providing ongoing reporting to stakeholders on the relevance of activities.</p></a></details>
+                  </div></div></div></div></div>
+
+
+              <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="Course">
+                  <img src="images/3-BSC.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                  <div class="text"><a href="portfolio/3-bsc.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Skoll Academy</h1>
+                  <p>Strategic consulting project with Big Society Capital investigating social investment models to address domestic violence in the UK.</p></a></details>
+                  </div></div></div></div></div>
+
+
+              <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="Course">
+                  <img src="images/4-EY.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                  <div class="text"><a href="portfolio/4-EY.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Leadership</h1>
+                  <p>A case study on the motivation and integration of EY's GigNow workforce.</p></a></details>
+                  </div></div></div></div></div>
+
+
+              <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="Course">
+                  <img src="images/5-MedData.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                  <div class="text"><a href="portfolio/5-MedData.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Global Health Challenge</h1>
+                  <p>A case study on using MedData™ to lower the burden of chronic diseases.</p></a></details>
+                  </div></div></div></div></div>
+
+
+              <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="Art">
+                  <img src="images/6-insta.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                  <div class="text"><a href="https://www.instagram.com/joannamakescards_/" target="_blank"><img src='images/art_white.png' height='22'><h1>Art</h1>
+                  <p>Stationery, Design, Lettering</p></a></details>
+                  </div></div></div></div></div>
+
+                </div></div></div></div></section>
 
 <!--ABOUT AND GENERAL-->
 
-<div id="about" class="text-center"><div class='container'>
-  <br><br><br><center><img src='images/about2.png' height='50'></center>
-  <h2>For further information about your symptoms, contact the following:</h2>
+<section id="about-section" class="text-center"><div class='container'>
+  <br><br><center><h5>About</h5></center>
+        <div class='row'>
+        <div class='col-sm-1'></div>
+        <div class='col-sm-10'>
+<center>
+  <br><div class="image-cropper circleborder headshot">
+    <img src="images/headshot.jpg" class="rounded" border="2">
+</div></center><br>
+  <h6>I have over 4 years of professional experience in measurement, reporting, and stakeholder management. Alongside these experiences, I am pursuing my MBA at the Saïd Business School to develop knowledge and skills in impact measurement and to further my passion for driving positive sustainable social change.<br>I am particularly interested in how visualisation techniques can be leveraged to increase the accessibility and usefulness of data to decision-makers, and thereby increase the effectiveness of impact measurement for social impact organizations.</h6><br><br>
+<center><h5>Skills</h5></center>
+    <p><b>Software:&emsp;</b>Tableau, Adobe Photoshop, Illustrator, & InDesign<br>
+    <b>Coding:&emsp;</b>HTML, CSS, JavaScript, jQuery, Git, GitHub</p><br><br>
+  </ul></p></div>
+</div></div></section>
 
-  <a href="https://www.ox.ac.uk/students/welfare/health/doctors?wssl=1" target="_blank"><img src='images/collegenurse.png' height='40'></a><br>
-  <a href="https://www.google.co.uk/search?q=chemist+near+me" target="_blank"><img src='images/chemist.png' height='40'></a><br><br>
-  <p class="lead">For more urgent care, please go to your GP or the emergency room</p>
-  <p class="lead">Call 111 for more information, or 999 for a life-threatening emergency</p>
+    <!-- Contact Us -->
+      <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5">
+            <div class="cover"></div>
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>Get in touch</h2>
+                            <div class="divider"></div>
+                            <h4>I'd love to hear from you!</h4>
+                        </div>
+                    </div>
+                </div>
 
-  <img src="images/disclaimer.png" height='50'><br>
-  <div class='container'>
-    <div class="masking">
-      <div class='row'>
-        <div class='col-sm-2'></div>
-        <div class='col-sm-8'>
-          <center><img src="images/disclaimer2.png" class="img-responsive" alt="Responsive image"></center><br>
-          <div class='col-sm-2'></div></div>
-          <br><br></div> 
-          <h2>Special Thanks to our Partners:</h2>
-          <a href="http://www.codefirstgirls.org.uk/" target="_blank"><img src="images/cfgirls.png" height="65"></a><br><br> 
-          <a href="https://www.sbs.ox.ac.uk/" target="_blank"><img src="images/oxfordlogo.png" height="80"></a><br><br><br>
+                <div class="contact wow bounceInRight" data-wow-delay="0.4s">
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-sm-12">
+                                <div class="contact-form">
+                                    <form action="mailto:joannacgtam@gmail.com" method="post">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" placeholder="Organization" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control input-lg" rows="5" placeholder="Thank you for reaching out! I look forward to returning your message. - All the best, Joanna" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s" value="Send Email">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+       <!-- Footer -->
+    <footer class="text-off-white">
+    <div class="footer">
+          <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+              <p class="copyright">Copyright Joanna Tam <b>&copy; 2018.</b></p>
+              <a href="#" class="scrolltotop"><img src="images/uparrow.png" height='22'></a>
+          </div></div></footer>
 
-          <form role='form'>
-            <label for="email">Find out more</label>
-            <input type="text" name="email" >
-            <button type="submit" class="btn btn-success">Send</button><br><br>
-          </form>
-          <div id='social-buttons'>
-            <a href="https://twitter.com/NHSEngland" target="_blank"><img src="images/twitter.png" height="40"></a>
-            <a href="https://www.facebook.com/NHSChoices/" target="_blank"><img src="images/facebook.png" height="40"></a>
-            <a href="https://www.pinterest.ca/uhsmadison/stomp-the-flu/" target="_blank"><img src="images/pinterest.png" height="40"></a><br><br>
-          </div>
-        </div>
-      </div>
+
+    <!-- Plugins JS -->
+
+    <script src="smoothscroll.js"></script>
+
+    <!-- Theme JS -->
+    <script src="theme.js"></script>
+
+
     </body>
 
 
     </html>
-    <!--Wazhma Wesa, Lwandlekazi Mazule, & Joanna Tam  (^_^) -->
+    <!--Joanna Tam-->
 
