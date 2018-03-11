@@ -164,20 +164,6 @@ $('#filters').on( 'click', 'a', function() {
 
 
 
-// cache container
-var $container = $('#container');
-// initialize isotope
-$container.isotope({
-  // options...
-});
-
-$('#filters a').click(function(){
-  var selector = $(this).attr('data-filter');
-  $container.isotope({ filter: selector });
-  return false;
-});
-
-
 /////////////////////////
 // Scroll to top button
 /////////////////////////
