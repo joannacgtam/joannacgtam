@@ -146,8 +146,8 @@ $('.counter').counterUp({
 ////////////////////////////////////////////////////////////////////////////////////////////
 $(window).load(function() {
 $('.portfolio_menu ul li').click(function(){
-	$('.portfolio_menu ul li').removeClass('active_prot_menu');
-	$(this).addClass('active_prot_menu');
+    $('.portfolio_menu ul li').removeClass('active_prot_menu');
+    $(this).addClass('active_prot_menu');
 });
 
 var $container = $('#portfolio');
@@ -162,6 +162,20 @@ $('#filters').on( 'click', 'a', function() {
 });
 });
 
+
+
+// cache container
+var $container = $('#container');
+// initialize isotope
+$container.isotope({
+  // options...
+});
+
+$('#filters a').click(function(){
+  var selector = $(this).attr('data-filter');
+  $container.isotope({ filter: selector });
+  return false;
+});
 
 
 /////////////////////////

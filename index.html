@@ -13,11 +13,20 @@
   <link href='main.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="mobile.css">
+  <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
   <script src="jquery-1.12.4.js"></script>
   <script src="jquery-ui.js"></script>
 
+  <!-- Plugins JS -->
+  <script src="smoothscroll.js"></script>
+  <script src="isotope.pkgd.min.js"></script>
+  <script src="classie.js"></script>
+  <!-- Theme JS -->
+  <script src="theme.js"></script>
 
- <script>
+
+  <script>
     $( function() {
       $( "#tabs" ).tabs({
         event: "mouseover"
@@ -25,13 +34,22 @@
     } );
   </script>
 
+
+  <script>
+  var frmvalidator  = new Validator("contactform");
+  frmvalidator.addValidation("name","req","Please provide your name"); 
+  frmvalidator.addValidation("email","req","Please provide your email"); 
+  frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+  frmvalidator.addValidation("organization","organization","Please enter organization"); 
+  </script>
+
 </head>
 <body data-spy="scroll" data-target="#main-navbar">
 
   <!--NAVBAR-->
-    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
+  <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -40,16 +58,16 @@
         </button>
         <a class="navbar-brand" href="#"><img src='images/home1.png' height='14'></a>
       </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-              <li><a class="page-scroll" href="#portfolio-section">Portfolio</a></li>
-              <li><a class="page-scroll" href="#about-section">About</a></li>
-              <li><a href="https://www.linkedin.com/in/joannacgtam/" target="_blank">Linkedin</a></li>
-              <li><a class="page-scroll" href="#contact-section">Contact</a></li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="page-scroll" href="#portfolio-section">Portfolio</a></li>
+          <li><a class="page-scroll" href="#about-section">About</a></li>
+          <li><a href="https://www.linkedin.com/in/joannacgtam/" target="_blank">Linkedin</a></li>
+          <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
   <!--HEADER-->
   <div id="titleimage" class="text-left"><div class='container'>
@@ -57,162 +75,195 @@
   </div></div>
 
   
-<!--PORTFOLIO-->
-<section id="portfolio-section" class="text-left">
-  <div class='container'>
+  <!--PORTFOLIO-->
+  <section id="portfolio-section" class="text-left">
+    <div class='container'>
       <div class="row">
-          <div class="col-md-12">
-              <div class="portfolio">
+        <div class="col-md-12">
+          <div class="portfolio">
+            <div class='container'>
+              <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                <h2>Portfolio</h2>
+                <h4>Increasing the accessibility & usefulness of data to decision-makers</h4>
+              </div>
+            </div>
 
-                          <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                              <h2>Portfolio</h2>
-                              <h4>Increasing the accessibility & usefulness of data to decision-makers</h4>
+
+            <div class="portfolio_content_area">
+              <div class="portfolio_menu">
+                <center>
+                  <ul id="filters">
+                    <li class="active_prot_menu"><a href="#porfolio_menu" data-filter=".datavis"><img src='images/data.png' height='13'>&nbsp;Data Visualisation & Reporting</a></li>
+                    <li><a href="#porfolio_menu" data-filter=".course"><img src='images/course.png' height='14'>&nbsp;Coursework</a></li>
+                    <li><a href="#porfolio_menu" data-filter=".art"><img src='images/art.png' height='14'>&nbsp;Artwork</a></li>
+                  </ul>
+                </center></div>
+
+                <div class="portfolio_content" id="portfolio">
+                  <div class='row' id="portfolio">
+                    <div class="col-xs-12 col-sm-4 nopadding">
+                      <div class="pcontainer"><div class="datavis">
+                        <img src="images/1-dv.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text"><a href="portfolio/tableau.html" target="_blank"><img src='images/data_white.png' height='17'><h1>LensShift</h1>
+                            <p>Data visualisation of the depth and breadth of the LensShift Taxonomy.<br>By collaborating with my colleagues, I ensure the quality of data is appropriate for effective and creative visualisation.</p></a></details>
                           </div>
+                        </div>
                       </div>
-                  </div></div></div>
+                    </div>
+                  </div>
 
-    <div class="portfolio_content_area">
-      <div class="portfolio_menu">
-        <div class='container'>
-        <center>
-                <a href="#portfolio_menu" data-filter=".DataVis"><img src='images/data.png' height='13'>&nbsp;Data Visualisation & Reporting</a>&emsp;▪&emsp;
-                <a href="#portfolio_menu" data-filter=".Course"><img src='images/course.png' height='14'>&nbsp;Coursework</a>&emsp;▪&emsp;
-                <a href="#portfolio_menu" data-filter=".Art"><img src='images/art.png' height='14'>&nbsp;Artwork</a>
-        </center>
-            
-            
-              <div class='row'>
-              <div class="col-xs-12 col-sm-4 nopadding">
-              <div class="pcontainer"><div class="DataVis">
-                  <img src="images/1-dv.jpg" alt="Avatar" class="image">
-                  <div class="overlay">
-                  <div class="text"><a href="portfolio/tableau.html" target="_blank"><img src='images/data_white.png' height='17'><h1>LensShift</h1>
-                  <p>Data visualisation of the depth and breadth of the LensShift Taxonomy.<br>By collaborating with my colleagues, I ensure the quality of data is appropriate for effective and creative visualisation.</p></a></details>
-                  </div></div></div></div></div>
-
-              <div class="col-xs-12 col-sm-4 nopadding">
-              <div class="pcontainer"><div class="DataVis">
-                  <img src="images/2-siobn.jpg" alt="Avatar" class="image">
-                  <div class="overlay">
-                  <div class="text"><a href="portfolio/SIOBN_Michaelmas17-18_Impact_Report.pdf" target="_blank"><img src='images/data_white.png' height='17'><h1>SIOBN</h1>
-                  <p>Monitoring & evaluating the Social Impact Oxford Business Network's (SIOBN) initiatives. Providing ongoing reporting to stakeholders on the relevance of activities.</p></a></details>
-                  </div></div></div></div></div>
+                  <div class="col-xs-12 col-sm-4 nopadding">
+                    <div class="pcontainer"><div class="datavis">
+                      <img src="images/2-siobn.jpg" alt="Avatar" class="image">
+                      <div class="overlay">
+                        <div class="text"><a href="portfolio/SIOBN_Michaelmas17-18_Impact_Report.pdf" target="_blank"><img src='images/data_white.png' height='17'><h1>SIOBN</h1>
+                          <p>Monitoring & evaluating the Social Impact Oxford Business Network's (SIOBN) initiatives. Providing ongoing reporting to stakeholders on the relevance of activities.</p></a></details>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
-              <div class="col-xs-12 col-sm-4 nopadding">
-              <div class="pcontainer"><div class="Course">
-                  <img src="images/3-BSC.jpg" alt="Avatar" class="image">
-                  <div class="overlay">
-                  <div class="text"><a href="portfolio/3-bsc.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Skoll Academy</h1>
-                  <p>Strategic consulting project with Big Society Capital investigating social investment models to address domestic violence in the UK.</p></a></details>
-                  </div></div></div></div></div>
+                <div class="col-xs-12 col-sm-4 nopadding">
+                  <div class="pcontainer"><div class="course">
+                    <img src="images/3-BSC.jpg" alt="Avatar" class="image">
+                    <div class="overlay">
+                      <div class="text"><a href="portfolio/3-bsc.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Skoll Academy</h1>
+                        <p>Strategic consulting project with Big Society Capital investigating social investment models to address domestic violence in the UK.</p></a></details>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
               <div class="col-xs-12 col-sm-4 nopadding">
-              <div class="pcontainer"><div class="Course">
+                <div class="pcontainer"><div class="course">
                   <img src="images/4-EY.jpg" alt="Avatar" class="image">
                   <div class="overlay">
-                  <div class="text"><a href="portfolio/4-EY.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Leadership</h1>
-                  <p>A case study on the motivation and integration of EY's GigNow workforce.</p></a></details>
-                  </div></div></div></div></div>
+                    <div class="text"><a href="portfolio/4-EY.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Leadership</h1>
+                      <p>A case study on the motivation and integration of EY's GigNow workforce.</p></a></details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
-              <div class="col-xs-12 col-sm-4 nopadding">
-              <div class="pcontainer"><div class="Course">
-                  <img src="images/5-MedData.jpg" alt="Avatar" class="image">
-                  <div class="overlay">
+            <div class="col-xs-12 col-sm-4 nopadding">
+              <div class="pcontainer"><div class="course">
+                <img src="images/5-MedData.jpg" alt="Avatar" class="image">
+                <div class="overlay">
                   <div class="text"><a href="portfolio/5-MedData.html" target="_blank"><img src='images/course_white.png' height='21'><h1>Global Health Challenge</h1>
-                  <p>A case study on using MedData™ to lower the burden of chronic diseases.</p></a></details>
-                  </div></div></div></div></div>
+                    <p>A case study on using MedData™ to lower the burden of chronic diseases.</p></a></details>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-              <div class="col-xs-12 col-sm-4 nopadding">
-              <div class="pcontainer"><div class="Art">
-                  <img src="images/6-insta.jpg" alt="Avatar" class="image">
-                  <div class="overlay">
-                  <div class="text"><a href="https://www.instagram.com/joannamakescards_/" target="_blank"><img src='images/art_white.png' height='22'><h1>Art</h1>
+          <div class="col-xs-12 col-sm-4 nopadding">
+            <div class="pcontainer"><div class="art">
+              <img src="images/6-insta.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text"><a href="https://www.instagram.com/joannamakescards_/" target="_blank"><img src='images/art_white.png' height='22'><h1>Art</h1>
                   <p>Stationery, Design, Lettering</p></a></details>
-                  </div></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                </div></div></div></div></section>
+      </div>
+    </div>
+  </center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 
 <!--ABOUT AND GENERAL-->
 
 <section id="about-section" class="text-center"><div class='container'>
   <br><br><center><h5>About</h5></center>
-        <div class='row'>
-        <div class='col-sm-1'></div>
-        <div class='col-sm-10'>
-<center>
-  <br><div class="image-cropper circleborder headshot">
-    <img src="images/headshot.jpg" class="rounded" border="2">
-</div></center><br>
-  <h6>I have over 4 years of professional experience in measurement, reporting, and stakeholder management. Alongside these experiences, I am pursuing my MBA at the Saïd Business School to develop knowledge and skills in impact measurement and to further my passion for driving positive sustainable social change.<br>I am particularly interested in how visualisation techniques can be leveraged to increase the accessibility and usefulness of data to decision-makers, and thereby increase the effectiveness of impact measurement for social impact organizations.</h6><br><br>
-<center><h5>Skills</h5></center>
-    <p><b>Software:&emsp;</b>Tableau, Adobe Photoshop, Illustrator, & InDesign<br>
-    <b>Coding:&emsp;</b>HTML, CSS, JavaScript, jQuery, Git, GitHub</p><br><br>
-  </ul></p></div>
-</div></div></section>
+  <div class='row'>
+    <div class='col-sm-1'></div>
+    <div class='col-sm-10'>
+      <center>
+        <br><div class="image-cropper circleborder headshot">
+          <img src="images/headshot.jpg" class="rounded" border="2">
+        </div></center><br>
+        <h6>I have over 4 years of professional experience in measurement, reporting, and stakeholder management. Alongside these experiences, I am pursuing my MBA at the Saïd Business School to develop knowledge and skills in impact measurement and to further my passion for driving positive sustainable social change.<br>I am particularly interested in how visualisation techniques can be leveraged to increase the accessibility and usefulness of data to decision-makers, and thereby increase the effectiveness of impact measurement for social impact organizations.</h6><br><br>
+        <center><h5>Skills</h5></center>
+        <p><b>Software:&emsp;</b>Tableau, Adobe Photoshop, Illustrator, & InDesign<br>
+          <b>Coding:&emsp;</b>HTML, CSS, JavaScript, jQuery, Git, GitHub</p><br><br>
+        </ul></p></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Us -->
-      <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5">
-            <div class="cover"></div>
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                            <h2>Get in touch</h2>
-                            <div class="divider"></div>
-                            <h4>I'd love to hear from you!</h4>
-                        </div>
-                    </div>
-                </div>
+  <!-- Contact Us -->
+  <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5">
+    <div class="cover"></div>
+    <div class="page-header-wrapper">
+      <div class="container">
+        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+          <h2>Get in touch</h2>
+          <div class="divider"></div>
+          <h4>I'd love to hear from you!</h4>
+        </div>
+      </div>
+    </div>
 
-                <div class="contact wow bounceInRight" data-wow-delay="0.4s">
-                    <div class="container">
-                      <div class="row">
-                          <div class="col-sm-12">
-                                <div class="contact-form">
-                                    <form action="mailto:joannacgtam@gmail.com" method="post">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Your Name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Organization" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea class="form-control input-lg" rows="5" placeholder="Thank you for reaching out! I look forward to returning your message. - All the best, Joanna" required></textarea>
-                                        </div>
-                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s" value="Send Email">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="contact wow bounceInRight" data-wow-delay="0.4s">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-form">
+              <form method="POST" name="contactform" action="contact-form-handler.php">  
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control input-lg" placeholder="Your Name" required>
                 </div>
-            </section>
-       <!-- Footer -->
-    <footer class="text-off-white">
+                <div class="form-group">
+                  <input type="email" name="email"  class="form-control input-lg" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="organization" class="form-control input-lg" placeholder="Organization" required>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" class="form-control input-lg" rows="5" placeholder="Thank you for reaching out! I look forward to returning your message. - All the best, Joanna" required></textarea>
+                </div>
+                <input type="submit" value="Send Form"><br>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="text-off-white">
     <div class="footer">
-          <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-              <p class="copyright">Copyright Joanna Tam <b>&copy; 2018.</b></p>
-              <a href="#" class="scrolltotop"><img src="images/uparrow.png" height='22'></a>
-          </div></div></footer>
+      <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+        <p class="copyright">Copyright Joanna Tam <b>&copy; 2018.</b></p>
+        <a href="#" class="scrolltotop"><img src="images/uparrow.png" height='22'></a>
+      </div>
+    </div>
+  </footer>
 
 
-    <!-- Plugins JS -->
-
-    <script src="smoothscroll.js"></script>
-
-    <!-- Theme JS -->
-    <script src="theme.js"></script>
 
 
-    </body>
+
+</body>
 
 
-    </html>
-    <!--Joanna Tam-->
+</html>
+<!--Joanna Tam-->
 
