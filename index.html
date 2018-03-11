@@ -34,15 +34,6 @@
     } );
   </script>
 
-
-  <script>
-  var frmvalidator  = new Validator("contactform");
-  frmvalidator.addValidation("name","req","Please provide your name"); 
-  frmvalidator.addValidation("email","req","Please provide your email"); 
-  frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-  frmvalidator.addValidation("organization","organization","Please enter organization"); 
-  </script>
-
 </head>
 <body data-spy="scroll" data-target="#main-navbar">
 
@@ -226,7 +217,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="contact-form">
-              <form method="POST" name="contactform" action="contact-form-handler.php">  
+              <form method="POST" name="contactform" get="contact-form-handler.php">  
                 <div class="form-group">
                   <input type="text" name="name" class="form-control input-lg" placeholder="Your Name" required>
                 </div>
@@ -241,6 +232,15 @@
                 </div>
                 <input type="submit" value="Send Form"><br>
               </form>
+
+
+  <script>
+  var frmvalidator  = new Validator("contactform");
+  frmvalidator.addValidation("name","req","Please provide your name"); 
+  frmvalidator.addValidation("email","req","Please provide your email"); 
+  frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+  frmvalidator.addValidation("organization","organization","Please enter organization"); 
+  </script>
             </div>
           </div>
         </div>
